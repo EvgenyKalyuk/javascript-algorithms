@@ -8,11 +8,13 @@ type FindArgs<Value> = {
 }
 
 export default class LinkedList<Value> {
-    public head: LinkedListNode<Value> | null = null;
-    public tail: LinkedListNode<Value> | null = null;
+    public head: LinkedListNode<Value> | null;
+    public tail: LinkedListNode<Value> | null;
     private compare: Comparator<Value, Value>;
 
     constructor(comparatorFunction?: (a: any, b: any) => number) {
+        this.head = null;
+        this.tail = null;
         this.compare = new Comparator<Value, Value>(comparatorFunction);
     }
 
