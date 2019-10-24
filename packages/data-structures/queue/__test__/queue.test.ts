@@ -13,12 +13,17 @@ describe('Queue', () => {
     });
 
     it('should enqueue data to queue', () => {
-        const queue = new Queue<number>();
+        try {
+            const queue = new Queue<number>();
 
-        queue.enqueue(1);
-        queue.enqueue(2);
+            queue.enqueue(1);
+            queue.enqueue(2);
 
-        expect(queue.toString()).toBe('1,2');
+            expect(queue.toString()).toBe('1,2');
+        } catch (error) {
+            console.log(error);
+        }
+
     });
 
     it('should be possible to enqueue/dequeue objects', () => {

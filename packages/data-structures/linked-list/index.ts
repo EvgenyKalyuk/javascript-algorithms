@@ -40,10 +40,8 @@ export default class LinkedList<Value> {
             return this;
         }
 
-        if (this.tail) {
-            this.tail.next = newNode;
-        }
-
+        newNode.next = null;
+        this.tail!.next = newNode;
         this.tail = newNode;
 
         return this;
