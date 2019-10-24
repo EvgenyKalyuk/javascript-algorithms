@@ -12,7 +12,7 @@ export default class LinkedList<Value> {
     public tail: LinkedListNode<Value> | null;
     private compare: Comparator<Value, Value>;
 
-    constructor(comparatorFunction?: (a: any, b: any) => number) {
+    constructor(comparatorFunction?: (a: Value, b: Value) => number) {
         this.head = null;
         this.tail = null;
         this.compare = new Comparator<Value, Value>(comparatorFunction);

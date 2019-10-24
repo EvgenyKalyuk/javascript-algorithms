@@ -12,7 +12,7 @@ export default class DoublyLinkedList<Value> {
     public tail: DoublyLinkedListNode<Value> | null;
     private comparator: Comparator<Value, Value>;
 
-    constructor(comparatorFunction?: (a: any, b: any) => number) {
+    constructor(comparatorFunction?: (a: Value, b: Value) => number) {
         this.comparator = new Comparator<Value, Value>(comparatorFunction);
         this.tail = null;
         this.head = null;
