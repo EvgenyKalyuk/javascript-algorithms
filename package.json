@@ -22,5 +22,12 @@
   },
   "scripts": {
     "test": "jest"
+  },
+  "jest": {
+    "projects": [
+      "<rootDir>/packages/algorithms/jest.config.js",
+      "<rootDir>/packages/data-structures/jest.config.js",
+      "<rootDir>/packages/utils/jest.config.js"
+    ]
   }
 }
